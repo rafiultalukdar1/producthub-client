@@ -14,7 +14,7 @@ const ProductsDetails = () => {
 
     useEffect(() => {
         if (id) {
-            axios.get(`http://localhost:5000/products-details/${id}`)
+            axios.get(`https://producthub-server-pi.vercel.app/products-details/${id}`)
                 .then(res => setProduct(res.data))
                 .catch(err => console.log(err));
         }

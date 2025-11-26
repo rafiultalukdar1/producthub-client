@@ -10,7 +10,7 @@ const LatestProducts = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/latest-products')
+        axios.get('https://producthub-server-pi.vercel.app/latest-products')
             .then(res => setProducts(res.data))
             .catch(err => {
                 console.log(err)

@@ -1,12 +1,14 @@
 "use client";
 
 import useAuth from '@/contexts/useAuth';
-import React from 'react';
+import { useRouter } from 'next/navigation';
+import React, { useEffect } from 'react';
 import { toast } from 'react-toastify';
 
 const AddPage = () => {
 
-    const { user } = useAuth();
+    const { user, loading } = useAuth();
+
 
     const handleCreateProduct = async (e) => {
         e.preventDefault();
@@ -24,7 +26,7 @@ const AddPage = () => {
             organizer_email: user?.email || "",
             organizer_photo: user?.photoURL || "",
         };
-        const res = await fetch("http://localhost:5000/products", {
+        const res = await fetch("https://producthub-server-pi.vercel.app/products", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(productData),

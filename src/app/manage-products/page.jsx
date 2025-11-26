@@ -13,7 +13,7 @@ const ManagePage = () => {
     useEffect(() => {
         if (!user?.email) return;
 
-        fetch(`http://localhost:5000/products-by-user?email=${user.email}`)
+        fetch(`https://producthub-server-pi.vercel.app/products-by-user?email=${user.email}`)
             .then(res => res.json())
             .then(data => setProducts(data));
     }, [user]);
@@ -31,7 +31,7 @@ const ManagePage = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/products/${id}`, {
+                fetch(`https://producthub-server-pi.vercel.app/products/${id}`, {
                     method: "DELETE"
                 })
                 .then(res => res.json())
