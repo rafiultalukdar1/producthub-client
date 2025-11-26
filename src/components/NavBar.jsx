@@ -1,18 +1,41 @@
 "use client";
+
+import useAuth from '@/contexts/useAuth';
 import {ShoppingBag } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React from 'react';
+import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 
 const NavBar = () => {
 
-    const pathname = usePathname();
+    const { user, logOut } = useAuth();
+    const [openProfile, setOpenProfile] = useState(false);
 
+    // Log Out
+    const handleLogOut = () => {
+        logOut()
+            .then(() => {
+                toast.success("You logged out successfully!");
+            })
+            .catch(error => {
+                toast.error(error.message);
+            });
+    };
+
+
+
+    const pathname = usePathname();
     const links = <>
         <Link href="/" className={pathname === "/" ? "active-link" : ""}>Home</Link>
         <Link href="/product" className={pathname === "/product" ? "active-link" : ""}>All Products</Link>
         <Link href="/about" className={pathname === "/about" ? "active-link" : ""}>About</Link>
         <Link href="/contact" className={pathname === "/contact" ? "active-link" : ""}>Contact</Link>
+    </>
+
+    const privetLinks = <>
+        <Link href="/add-product" className={pathname === "/add-product" ? "active-link" : ""}>Add Product</Link>
+        <Link href="/manage-products" className={pathname === "/manage-products" ? "active-link" : ""}>Manage Products</Link>
     </>
 
     return (
@@ -37,10 +60,24 @@ const NavBar = () => {
                             </nav>
                         </div>
                         <div className='navbar-end'>
-                            <div className="flex items-center gap-3">
-                                <Link href="/login"><button className={`py-1.5 px-5 rounded-lg text-[18px] font-semibold cursor-pointer border ${pathname === "/login" ? "bg-[#219E64] text-white border-[#219E64]" : "bg-white text-[#219E64] border-[#219E64]"}`}>Login</button></Link>
-                                <Link href="/register" className='hidden sm:block'><button className={`py-1.5 px-5 rounded-lg text-[18px] font-semibold cursor-pointer border ${pathname === "/register" ? "bg-[#219E64] text-white border-[#219E64]" : "bg-white text-[#219E64] border-[#219E64]"}`}>Register</button></Link>
-                            </div>
+                            {
+                                user ? ( 
+                                <div className="relative">
+                                    <img src={user?.photoURL ?? user?.reloadUserInfo?.photoURL ?? "/default-profile.png" } alt="Profile" className="w-11 h-11 object-cover rounded-full cursor-pointer" onClick={()=> setOpenProfile(!openProfile)} /> {openProfile && ( <div className="absolute right-0 mt-2 w-[255px] bg-white rounded shadow-lg p-4 flex flex-col gap-2 z-50">
+                                        <span className="font-medium text-[#141414] text-[16px]">Name: {user?.displayName}</span>
+                                        <span className="text-sm text-gray-600">Email: {user?.email}</span>
+                                        <div onClick={() => setOpenProfile(false)} className='flex flex-col gap-2 py-1 text-[18px] font-semibold text-[#141414]'>
+                                            {privetLinks}
+                                        </div>
+                                        <button onClick={() => { setOpenProfile(false); handleLogOut(); }} className="mt-2 py-1.5 px-3 bg-[#219E64] text-white rounded hover:bg-[#1b7d4f] transition cursor-pointer">Logout</button>
+                                    </div> )}
+                                </div>
+                            ) : ( 
+                                <div className="flex items-center gap-3">
+                                    <Link href="/login"><button className={`py-1.5 px-5 rounded-lg text-[18px] font-semibold cursor-pointer border ${ pathname==="/login" ? "bg-[#219E64] text-white border-[#219E64]" : "bg-white text-[#219E64] border-[#219E64]" }`}> Login</button></Link>
+                                    <Link href="/register" className="hidden sm:block"><button className={`py-1.5 px-5 rounded-lg text-[18px] font-semibold cursor-pointer border ${ pathname==="/register" ? "bg-[#219E64] text-white border-[#219E64]" : "bg-white text-[#219E64] border-[#219E64]" }`}>Register</button></Link>
+                                </div>)
+                            }
                         </div>
                     </div>
                 </div>
