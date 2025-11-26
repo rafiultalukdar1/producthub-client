@@ -11,6 +11,7 @@ const LoginPage = () => {
     const [showPass, setShowPass] = useState(false);
     const { signWithGoogle, signInUser } = useAuth();
 
+    // Login
     const handleLogin = (e) => {
         e.preventDefault();
         const email = e.target.email.value;
@@ -33,8 +34,6 @@ const LoginPage = () => {
                 toast.error(message);
             });
     };
-
-
 
     // Google SignIn
     const handleGoogleSignIn = () => {

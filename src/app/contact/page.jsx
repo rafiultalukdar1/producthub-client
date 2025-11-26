@@ -17,7 +17,7 @@ const ContactPage = () => {
                 <div className="container max-w-6xl mx-auto px-4">
                     <div className="text-center mb-12">
                         <h1 className="text-[32px] sm:text-[40px] md:text-[48px] font-bold text-[#141414]"> Contact Us </h1>
-                        <p className="text-[#65758B] text-[16px] sm:text-[18px] mt-4"> Have a question or want to reach out? Fill out the form below and we'll get back to you. </p>
+                        <p className="text-[#65758B] text-[16px] sm:text-[18px]"> Have a question or want to reach out? Fill out the form below and we'll get back to you. </p>
                     </div>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                         <div className="">

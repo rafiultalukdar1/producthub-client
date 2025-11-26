@@ -37,7 +37,7 @@ const ProductsDetails = () => {
                     <Link href='/product' className="flex items-center gap-1.5 text-[16px] font-medium text-[#65758B]"><ArrowLeft size={20}/><span>Back to Products</span></Link>
 
                     <div>
-                        <img src={product.imageUrl} alt={product.title} className="w-full h-[310px] sm:h-[390px] md:h-[470px] object-cover rounded-lg md:rounded-2xl mt-5 md:mt-[35px]"/>
+                        <img src={product.imageUrl} alt={product.title} className="w-full h-[310px] sm:h-[390px] md:h-[470px] shadow-sm object-cover rounded-lg md:rounded-2xl mt-5 md:mt-[35px]"/>
                         <p className='inline-flex items-center gap-1.5 py-1.5 px-4 bg-[#E7F8F2] text-[15px] text-[#10B77F] font-medium rounded-full mt-5'><Tag size={15} /><span>{product.category}</span></p>
                         <h2 className='text-[#141414] text-[24px] sm:text-[28px] md:text-[36px] font-bold mt-5'>{product.title}</h2>
                         <p className="text-[#65758B] text-[15px] pt-4">{product.description}</p>
@@ -73,7 +73,7 @@ const ProductsDetails = () => {
                                     </div>
                                     <div>
                                         <h4 className="text-[#141414] text-[18px] font-semibold">{product.organizer_name} </h4>
-                                        <p className="text-[15px] text-[#65758B]">{product.email}</p>
+                                        <p className="text-[15px] text-[#65758B]">{product.email || product.organizer_email}</p>
                                     </div>
                                 </div>
                             </div>
