@@ -3,6 +3,7 @@
 import useAuth from '@/contexts/useAuth';
 import { Eye, EyeOff } from 'lucide-react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 
@@ -10,6 +11,8 @@ const LoginPage = () => {
 
     const [showPass, setShowPass] = useState(false);
     const { signWithGoogle, signInUser } = useAuth();
+
+    const router = useRouter();
 
     // Login
     const handleLogin = (e) => {
@@ -23,9 +26,10 @@ const LoginPage = () => {
         signInUser(email, password)
             .then(() => {
                 toast.success("Login Successful!");
-                // setTimeout(() => {
-                //     window.location.href = "/";
-                // }, 800);
+                e.target.reset();
+                setTimeout(() => {
+                    router.push("/");
+                }, 800);
             })
             .catch(error => {
                 const message = error.code
@@ -40,6 +44,9 @@ const LoginPage = () => {
         signWithGoogle()
             .then(() => {
                 toast.success('Google SignIn Successful!');
+                setTimeout(() => {
+                    router.push("/");
+                }, 800);
             })
             .catch(error => {
                 const message = error.code

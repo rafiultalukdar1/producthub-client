@@ -3,13 +3,16 @@
 import useAuth from '@/contexts/useAuth';
 import { Calendar, Delete, Eye, MapPin, Tag, Trash } from 'lucide-react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 import Swal from 'sweetalert2';
 
 const ManagePage = () => {
-    const { user } = useAuth();
+    const { user, loading } = useAuth();
     const [products, setProducts] = useState([]);
+    const router = useRouter();
 
+    // Fetch products
     useEffect(() => {
         if (!user?.email) return;
 
@@ -17,6 +20,20 @@ const ManagePage = () => {
             .then(res => res.json())
             .then(data => setProducts(data));
     }, [user]);
+
+    // Protected Route
+    useEffect(() => {
+        if (!loading && !user) {
+            router.replace("/login");
+        }
+    }, [user, loading, router]);
+
+    if (loading || (!user && loading === false)) {
+        return <div className='min-h-screen flex justify-center items-center'>
+                <span className="loading loading-bars loading-xl"></span>
+            </div>;
+    }
+
 
     // Delete Handler
     const handleDelete = (id) => {

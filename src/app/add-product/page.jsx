@@ -8,8 +8,23 @@ import { toast } from 'react-toastify';
 const AddPage = () => {
 
     const { user, loading } = useAuth();
+    const router = useRouter();
+
+    // Protected Route
+    useEffect(() => {
+        if (!loading && !user) {
+            router.replace("/login");
+        }
+    }, [user, loading, router]);
+
+    if (loading || (!user && loading === false)) {
+        return <div className='min-h-screen flex justify-center items-center'>
+                <span className="loading loading-bars loading-xl"></span>
+            </div>;
+    }
 
 
+    // Create Product
     const handleCreateProduct = async (e) => {
         e.preventDefault();
         const form = e.target;

@@ -1,5 +1,6 @@
 "use client";
 
+import useAuth from '@/contexts/useAuth';
 import axios from 'axios';
 import { Eye, Tag } from 'lucide-react';
 import Link from 'next/link';
@@ -10,6 +11,7 @@ const ProductPage = () => {
     const [products, setProducts] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('');
+    const {loading} = useAuth();
 
     useEffect(() => {
         axios.get('https://producthub-server-pi.vercel.app/products')
@@ -18,6 +20,15 @@ const ProductPage = () => {
                 console.log(err)
             });
     }, []);
+
+    // spiner
+    if (loading) {
+        return (
+            <div className='min-h-screen flex justify-center items-center'>
+                <span className="loading loading-bars loading-xl"></span>
+            </div>
+        );
+    }
 
     // Filtered products based on search and category
     const filteredProducts = products.filter(product => {

@@ -3,6 +3,7 @@
 import useAuth from '@/contexts/useAuth';
 import { Eye, EyeOff } from 'lucide-react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 
@@ -10,6 +11,8 @@ const RregisterPage = () => {
 
     const [showPass, setShowPass] = useState(false);
     const { updateUser, createUser, signWithGoogle } = useAuth();
+
+    const router = useRouter();
 
     // Form Rregister
     const handleRegister = (e) => {
@@ -45,10 +48,9 @@ const RregisterPage = () => {
                 .then(() => {
                     toast.success("Account created successfully!");
                     e.target.reset();
-
-                    // setTimeout(() => {
-                    //     window.location.href = "/";
-                    // }, 800);
+                    setTimeout(() => {
+                        router.push("/");
+                    }, 800);
                 })
                 .catch(() => {
                     toast.error("Profile update failed!");
@@ -68,6 +70,9 @@ const RregisterPage = () => {
         signWithGoogle()
             .then(() => {
                 toast.success('Google SignIn Successful!');
+                setTimeout(() => {
+                    router.push("/");
+                }, 800);
             })
             .catch(error => {
                 const message = error.code
