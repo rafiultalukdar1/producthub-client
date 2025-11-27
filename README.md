@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ProductHub 🚀
 
-## Getting Started
+**ProductHub** is a modern web application designed to help users manage, showcase, and sell their products efficiently.  
+The platform allows users to create, view, update, and delete products while providing analytics, inventory tracking, and a smooth user experience.  
 
-First, run the development server:
+![ProductHub Screenshot](./screenshot.png)  <!-- Replace with your screenshot path -->
 
+🔗 **Live Demo:** https://producthub-client.vercel.app/
+
+🔗 **GitHub Repository link (Client):** https://github.com/rafiultalukdar1/producthub-client.git
+
+🔗 **GitHub Repository link (Server):** https://github.com/rafiultalukdar1/producthub-server.git
+
+---
+
+## 💻 Setup & Installation
+
+### Frontend
 ```bash
+git clone https://github.com/username/ProductHub.git
+cd ProductHub/frontend
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Frontend Dependencies:**
+* axios, daisyui, firebase, lucide-react, next, react, react-dom, react-toastify, sweetalert2
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Backend
+```bash
+cd ProductHub/backend
+npm install
+nodemon index.js
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Backend Dependencies:**
+* express, cors, dotenv, mongodb, nodemon
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🌐 Route Summary
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Frontend Routes
+| Route | Description |
+|-------|-------------|
+| `/` | Home page displaying featured products and stats |
+| `/login` | Login page for users |
+| `/register` | Registration page |
+| `/add` | Add a new product (requires login) |
+| `/products` | Browse all products |
+| `/products/:id` | Product details page |
+| `/manage-products` | Manage user's products (requires login) |
+| `/about` | About page |
+| `/contact` | Contact page |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Backend API Routes
+| Method | Route | Description |
+|--------|-------|-------------|
+| GET | `/products` | Fetch all products |
+| GET | `/products/:id` | Fetch product details by ID |
+| POST | `/products` | Add a new product |
+| PUT | `/products/:id` | Update a product by ID |
+| DELETE | `/products/:id` | Delete a product by ID |
+| POST | `/auth/login` | User login |
+| POST | `/auth/register` | User registration |
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ✨ Features
+* ✅ Responsive and clean UI design  
+* 🔒 User authentication with Firebase  
+* 📦 Product CRUD operations (Create, Read, Update, Delete)  
+* 📊 Analytics & inventory tracking  
+* ⚡ Fast and secure platform  
+* 🔔 Sweetalert2 for alerts & notifications  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🛠 Technologies Used
+
+**Frontend:**  
+Next.js, React, Tailwind CSS, DaisyUI, Firebase, Axios, Lucide React, React Toastify  
+
+**Backend:**  
+Node.js, Express.js, MongoDB, CORS, dotenv, Nodemon  
+
