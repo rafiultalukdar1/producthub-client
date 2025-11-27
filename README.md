@@ -17,8 +17,7 @@ The platform allows users to create, view, update, and delete products while pro
 
 ### Frontend
 ```bash
-git clone https://github.com/username/ProductHub.git
-cd ProductHub/frontend
+git clone https://github.com/rafiultalukdar1/producthub-client.git
 npm install
 npm run dev
 ```
@@ -83,4 +82,3 @@ Next.js, React, Tailwind CSS, DaisyUI, Firebase, Axios, Lucide React, React Toas
 
 **Backend:**  
 Node.js, Express.js, MongoDB, CORS, dotenv, Nodemon  
-
