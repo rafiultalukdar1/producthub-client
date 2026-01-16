@@ -52,7 +52,7 @@ const NavBar = () => {
                                     {links}
                                 </nav>
                             </div>
-                            <Link href="/" className='flex items-center gap-1.5 text-[20px] sm:text-[22px] font-bold text-[#219E64]'><ShoppingBag /><span>ProductHub</span></Link>
+                            <Link href="/" className='flex items-center gap-1.5 text-[20px] sm:text-[22px] font-bold text-[#E15C43]'><ShoppingBag /><span>ProductHub</span></Link>
                         </div>
                         <div className='navbar-center hidden lg:flex'>
                             <nav className='flex items-center gap-[22px] font-semibold text-[#141414]'>
@@ -69,13 +69,13 @@ const NavBar = () => {
                                         <div onClick={() => setOpenProfile(false)} className='flex flex-col gap-2 py-1 text-[18px] font-semibold text-[#141414]'>
                                             {privetLinks}
                                         </div>
-                                        <button onClick={() => { setOpenProfile(false); handleLogOut(); }} className="mt-2 py-1.5 px-3 bg-[#219E64] text-white rounded hover:bg-[#1b7d4f] transition cursor-pointer">Logout</button>
+                                        <button onClick={() => { setOpenProfile(false); handleLogOut(); }} className="mt-2 py-1.5 px-3 bg-[#E15C43] text-white rounded hover:bg-[#1b7d4f] transition cursor-pointer">Logout</button>
                                     </div> )}
                                 </div>
                             ) : ( 
                                 <div className="flex items-center gap-3">
-                                    <Link href="/login"><button className={`py-1.5 px-5 rounded-lg text-[18px] font-semibold cursor-pointer border ${ pathname==="/login" ? "bg-[#219E64] text-white border-[#219E64]" : "bg-white text-[#219E64] border-[#219E64]" }`}> Login</button></Link>
-                                    <Link href="/register" className="hidden sm:block"><button className={`py-1.5 px-5 rounded-lg text-[18px] font-semibold cursor-pointer border ${ pathname==="/register" ? "bg-[#219E64] text-white border-[#219E64]" : "bg-white text-[#219E64] border-[#219E64]" }`}>Register</button></Link>
+                                    <Link href="/login"><button className={`py-1.5 px-5 rounded-lg text-[18px] font-semibold cursor-pointer border ${ pathname==="/login" ? "bg-[#E15C43] text-white border-[#E15C43]" : "bg-white text-[#E15C43] border-[#E15C43]" }`}> Login</button></Link>
+                                    <Link href="/register" className="hidden sm:block"><button className={`py-1.5 px-5 rounded-lg text-[18px] font-semibold cursor-pointer border ${ pathname==="/register" ? "bg-[#E15C43] text-white border-[#E15C43]" : "bg-white text-[#E15C43] border-[#E15C43]" }`}>Register</button></Link>
                                 </div>)
                             }
                         </div>

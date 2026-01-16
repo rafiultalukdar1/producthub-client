@@ -91,7 +91,7 @@ const ManagePage = () => {
                                         <div className='flex flex-col gap-2.5 mt-2'>
                                             <div className="flex items-center gap-3">
                                                 <div className="bg-[#E7F8F2] w-9 h-9 rounded-full flex items-center justify-center">
-                                                    <Calendar size={18} className="text-[#219E64]" />
+                                                    <Calendar size={18} className="text-[#E15C43]" />
                                                 </div>
                                                 <h4 className="text-[18px] font-semibold text-[#141414]">
                                                     {new Date(product.date).toLocaleDateString("en-CA")}
@@ -99,7 +99,7 @@ const ManagePage = () => {
                                             </div>
                                             <div className="flex items-center gap-3">
                                                 <div className="bg-[#E7F8F2] w-9 h-9 rounded-full flex items-center justify-center">
-                                                    <MapPin size={18} className="text-[#219E64]" />
+                                                    <MapPin size={18} className="text-[#E15C43]" />
                                                 </div>
                                                 <h4 className="text-[18px] font-semibold text-[#141414]">
                                                     {product.location}

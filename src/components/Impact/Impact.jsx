@@ -30,7 +30,7 @@ const Impact = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-7">
                         {stats.map((stat, index) => (
                             <div key={index} className='text-center'>
-                                <h3 className="text-[32px] lg:text-[38px] font-bold text-[#219E64] mb-1"> {stat.value}</h3>
+                                <h3 className="text-[32px] lg:text-[38px] font-bold text-[#E15C43] mb-1"> {stat.value}</h3>
                                 <p className="text-[16px] text-[#6D7873] ">{stat.label}</p>
                             </div>
                         ))}

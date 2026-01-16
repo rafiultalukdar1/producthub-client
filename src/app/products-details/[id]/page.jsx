@@ -47,7 +47,7 @@ const ProductsDetails = () => {
                                 <div className="grid grid-cols-1 mt-4 gap-3">
                                     <div className="flex items-center gap-3">
                                         <div className="bg-[#E7F8F2] w-11 h-11 rounded-full flex items-center justify-center">
-                                            <Calendar size={20} className="text-[#219E64]" />
+                                            <Calendar size={20} className="text-[#E15C43]" />
                                         </div>
                                         <h4 className="text-[18px] font-semibold text-[#141414]">
                                             {new Date(product.date).toLocaleDateString("en-CA")}
@@ -55,14 +55,14 @@ const ProductsDetails = () => {
                                     </div>
                                     <div className="flex items-center gap-3">
                                         <div className="bg-[#E7F8F2] w-11 h-11 rounded-full flex items-center justify-center">
-                                            <MapPin size={20} className="text-[#219E64]" />
+                                            <MapPin size={20} className="text-[#E15C43]" />
                                         </div>
                                         <h4 className="text-[18px] font-semibold text-[#141414]">
                                             {product.location}
                                         </h4>
                                     </div>
                                 </div>
-                                <button onClick={handleAddToCart} className="mt-7 py-1.5 w-full bg-[#219E64] hover:bg-[#0c7e49] transition rounded text-white text-[17px] font-medium text-center cursor-pointer flex items-center justify-center gap-2.5"><ShoppingCart size={16}/>Add to cart</button>
+                                <button onClick={handleAddToCart} className="mt-7 py-1.5 w-full bg-[#E15C43] hover:bg-[#1F1F1F] transition rounded text-white text-[17px] font-medium text-center cursor-pointer flex items-center justify-center gap-2.5"><ShoppingCart size={16}/>Add to cart</button>
                             </div>
 
                             <div className="p-3 sm:p-5 border border-[#E1E7EF] rounded-2xl">

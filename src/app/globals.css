@@ -41,7 +41,7 @@ body {
 }
 
 .active-link {
-  color: #219E64;
+  color: #E15C43;
 }
 
 
@@ -50,15 +50,15 @@ body {
 }
 
 .form-input {
-  @apply w-full px-[15px] py-2 text-[#464545] text-[15px] outline-0 border border-[#219e648f] focus:border-[#219E64] bg-[#F3F3F3] rounded;
+  @apply w-full px-[15px] py-2 text-[#464545] text-[15px] outline-0 border border-[#E15C438f] focus:border-[#E15C43] bg-[#F3F3F3] rounded;
 }
 
 .google-button {
-  @apply flex items-center justify-center gap-2 w-full border border-[#219E64] py-2 duration-200 bg-white hover:bg-[#219e6438] rounded text-[15px] text-[#141414] font-medium cursor-pointer;
+  @apply flex items-center justify-center gap-2 w-full border border-[#E15C43] py-2 duration-200 bg-white hover:bg-[#E15C4338] rounded text-[15px] text-[#141414] font-medium cursor-pointer;
 }
 
 .divider::before,
 .divider::after {
-  background: #219E64;
+  background: #E15C43;
   height: 1px;
 }

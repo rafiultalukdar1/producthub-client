@@ -33,9 +33,9 @@ const LatestProducts = () => {
                                     <p className='text-[#6D7873] text-[15px] py-1.5 overflow-hidden [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:2]'>{product.description}</p>
                                     <h4 className='text-[20px] font-semibold text-[#10B77F] pt-1'>$ {product.price}</h4>
 
-                                    {/* <button className='py-1.5 w-full bg-[#219E64] hover:bg-[#0c7e49] transition rounded mt-3 text-white text-[17px] font-medium text-center cursor-pointer flex items-center justify-center gap-1.5'><Eye size={18} /><span>View Details</span></button> */}
+                                    {/* <button className='py-1.5 w-full bg-[#E15C43] hover:bg-[#1F1F1F] transition rounded mt-3 text-white text-[17px] font-medium text-center cursor-pointer flex items-center justify-center gap-1.5'><Eye size={18} /><span>View Details</span></button> */}
                                     <Link href={`/products-details/${product._id}`}>
-                                        <button className='py-1.5 w-full bg-[#219E64] hover:bg-[#0c7e49] transition rounded mt-3 text-white text-[17px] font-medium text-center cursor-pointer flex items-center justify-center gap-1.5'>
+                                        <button className='py-1.5 w-full bg-[#E15C43] hover:bg-[#1F1F1F] transition rounded mt-3 text-white text-[17px] font-medium text-center cursor-pointer flex items-center justify-center gap-1.5'>
                                             <Eye size={18} />
                                             <span>View Details</span>
                                         </button>
@@ -45,7 +45,7 @@ const LatestProducts = () => {
                         ))}
                     </div>
                     <div className='text-center'>
-                        <Link href="/product" className='bg-[#219E64] hover:bg-[#0c7e49] mt-10 inline-block text-white text-[17px] font-medium py-2 px-7 rounded-md text-center'>See All Products</Link>
+                        <Link href="/product" className='bg-[#E15C43] hover:bg-[#1F1F1F] mt-10 inline-block text-white text-[17px] font-medium py-2 px-7 rounded-md text-center'>See All Products</Link>
                     </div>
                 </div>
             </div>

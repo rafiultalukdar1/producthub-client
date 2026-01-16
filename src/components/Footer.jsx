@@ -6,9 +6,9 @@ const Footer = () => {
         <>
             <div className='bg-[#FBFCFB] shadow-[0_-3px_6px_rgba(0,0,0,0.1)]'>
                 <div className='container'>
-                    <div className='py-[35px] grid grid-cols-12 gap-5 gap-y-[30px] border-b border-[#219E64]'>
+                    <div className='py-[35px] grid grid-cols-12 gap-5 gap-y-[30px] border-b border-[#E15C43]'>
                     <div className='col-span-12 sm:col-span-6 lg:col-span-4 max-w-[320px]'>
-                        <button className='flex items-center gap-1.5 text-[20px] sm:text-[22px] font-bold text-[#219E64]'><ShoppingBag /><span>ProductHub</span></button>
+                        <button className='flex items-center gap-1.5 text-[20px] sm:text-[22px] font-bold text-[#E15C43]'><ShoppingBag /><span>ProductHub</span></button>
                         <p className='text-[18px] text-black pt-5'>ProductHub brings you a curated selection of quality products designed to elevate your everyday lifestyle.</p>
                     </div>
                     <div className='col-span-12 sm:col-span-6 lg:col-span-3'>
@@ -30,9 +30,9 @@ const Footer = () => {
                     <div className='col-span-12 sm:col-span-6 lg:col-span-2'>
                         <h4 className='text-[21px] text-black font-semibold pb-[15px]'>Follow Us</h4>
                         <ul className='flex items-center gap-6'>
-                            <li className='text-[#219E64] hover:text-[#069251] duration-300 cursor-pointer'><Instagram size={30} /></li>
-                            <li className='text-[#219E64] hover:text-[#069251] duration-300 cursor-pointer'><Facebook size={30} /></li>
-                            <li className='text-[#219E64] hover:text-[#069251] duration-300 cursor-pointer'><Twitter size={28} /></li>
+                            <li className='text-[#E15C43] hover:text-[#069251] duration-300 cursor-pointer'><Instagram size={30} /></li>
+                            <li className='text-[#E15C43] hover:text-[#069251] duration-300 cursor-pointer'><Facebook size={30} /></li>
+                            <li className='text-[#E15C43] hover:text-[#069251] duration-300 cursor-pointer'><Twitter size={28} /></li>
                         </ul>
                     </div>
                     </div>

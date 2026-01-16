@@ -23,21 +23,21 @@ const ContactPage = () => {
                         <div className="">
                             <div className="bg-white border border-[#E1E7EF] rounded-2xl px-6 py-4 flex flex-col items-center gap-1 shadow-sm hover:shadow-md transition transform mb-5">
                                 <div className="bg-[#E7F8F2]  w-15 h-15 rounded-full flex items-center justify-center">
-                                    <Mail className="text-[#219E64]" size={28} />
+                                    <Mail className="text-[#E15C43]" size={28} />
                                 </div>
                                 <h4 className="text-[16px] sm:text-[18px] font-semibold text-[#141414] text-center"> Email </h4>
                                 <p className="text-[15px] text-[#65758B] text-center"> info@producthub.com </p>
                             </div>
                             <div className="bg-white border border-[#E1E7EF] rounded-2xl px-6 py-4 flex flex-col items-center gap-1 shadow-sm hover:shadow-md transition transform mb-5">
                                 <div className="bg-[#E7F8F2]  w-15 h-15 rounded-full flex items-center justify-center">
-                                    <PhoneCall className="text-[#219E64]" size={28} />
+                                    <PhoneCall className="text-[#E15C43]" size={28} />
                                 </div>
                                 <h4 className="text-[16px] sm:text-[18px] font-semibold text-[#141414] text-center"> Call </h4>
                                 <p className="text-[15px] text-[#65758B] text-center"> +880 1XXX-XXXXXX </p>
                             </div>
                             <div className="bg-white border border-[#E1E7EF] rounded-2xl px-6 py-4 flex flex-col items-center gap-1 shadow-sm hover:shadow-md transition transform mb-5">
                                 <div className="bg-[#E7F8F2] w-15 h-15 rounded-full flex items-center justify-center">
-                                    <MapPin className="text-[#219E64]" size={28} />
+                                    <MapPin className="text-[#E15C43]" size={28} />
                                 </div>
                                 <h4 className="text-[16px] sm:text-[18px] font-semibold text-[#141414] text-center"> Location </h4>
                                 <p className="text-[15px] text-[#65758B] text-center"> Dhaka, Bangladesh </p>
@@ -57,7 +57,7 @@ const ContactPage = () => {
                                     <label className="form-label" htmlFor="message">Message</label>
                                     <textarea id="message" name="message" placeholder="Your Message" rows={5} className="form-input" />
                                 </div>
-                                <button type="submit" className="mt-2 py-2.5 w-full bg-[#219E64] hover:bg-[#0c7e49] text-white font-medium rounded-lg transition cursor-pointer text-center"> Send Message </button>
+                                <button type="submit" className="mt-2 py-2.5 w-full bg-[#E15C43] hover:bg-[#1F1F1F] text-white font-medium rounded-lg transition cursor-pointer text-center"> Send Message </button>
                             </form>
                         </div>
                     </div>

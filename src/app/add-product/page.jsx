@@ -77,7 +77,7 @@ const AddPage = () => {
                                 <input type="email" name="organizer_email" value={user?.email || ''} readOnly className="form-input bg-gray-100" />
                             </div>
                             <input type="text" name="organizer_photo" value={user?.photoURL || ''} readOnly hidden />
-                            <button type="submit" className="w-full bg-[#219E64] hover:bg-[#1b7f52] text-white font-semibold py-2.5 rounded-lg transition cursor-pointer">Create Product</button>
+                            <button type="submit" className="w-full bg-[#E15C43] hover:bg-[#1b7f52] text-white font-semibold py-2.5 rounded-lg transition cursor-pointer">Create Product</button>
                         </form>
                     </div>
                 </div>
