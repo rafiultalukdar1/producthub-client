@@ -3,7 +3,6 @@
 **ProductHub** is a modern web application designed to help users manage, showcase, and sell their products efficiently.  
 The platform allows users to create, view, update, and delete products while providing analytics, inventory tracking, and a smooth user experience.  
 
-![ProductHub Screenshot](./screenshot.png)  <!-- Replace with your screenshot path -->
 
 🔗 **Live Demo:** https://producthub-client.vercel.app/
 
